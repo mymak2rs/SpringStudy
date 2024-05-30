@@ -16,7 +16,7 @@ public class OrderApp {
 
     long memberId = 1L;
 
-    Member member = new Member(memberId, "테스트유저", Grade.BASIC);
+    Member member = new Member(memberId, "테스트유저", Grade.VIP);
     memberService.join(member);
 
     Order order = orderService.createOrder(memberId, "USB", 24900);
