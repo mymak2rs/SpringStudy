@@ -6,6 +6,7 @@ import com.study.shopping.member.Member;
 import org.springframework.stereotype.Component;
 
 @Component
+@SubDiscountPolicy
 public class FixDiscountPolicy implements DiscountPolicy {
 
   private int discountFixAmount = 1000; // 고정 할인 금액

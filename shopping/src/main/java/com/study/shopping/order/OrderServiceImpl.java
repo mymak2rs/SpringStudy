@@ -3,6 +3,7 @@ package com.study.shopping.order;
 import com.study.shopping.discount.DiscountPolicy;
 import com.study.shopping.member.Member;
 import com.study.shopping.member.MemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -11,6 +12,7 @@ public class OrderServiceImpl implements OrderService {
   private final MemberRepository memberRepository;
   private final DiscountPolicy discountPolicy;
 
+  @Autowired
   public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
     this.discountPolicy = discountPolicy;
     this.memberRepository = memberRepository;
