@@ -3,20 +3,15 @@ package com.study.shopping.order;
 import com.study.shopping.discount.DiscountPolicy;
 import com.study.shopping.member.Member;
 import com.study.shopping.member.MemberRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
 @Component
+@RequiredArgsConstructor
 public class OrderServiceImpl implements OrderService {
 
   private final MemberRepository memberRepository;
   private final DiscountPolicy discountPolicy;
-
-  @Autowired
-  public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
-    this.discountPolicy = discountPolicy;
-    this.memberRepository = memberRepository;
-  }
 
   @Override
   public Order createOrder(Long memberId, String itemName, int itemPrice) {
