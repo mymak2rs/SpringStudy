@@ -1,5 +1,8 @@
 package com.study.shopping.order;
 
+import lombok.Getter;
+
+@Getter
 public class Order {
 
   private Long memberId; // 주문자 id
@@ -26,21 +29,5 @@ public class Order {
         ", itemPrice=" + itemPrice +
         ", discountPrice=" + discountPrice +
         '}';
-  }
-
-  public Long getMemberId() {
-    return memberId;
-  }
-
-  public String getItemName() {
-    return itemName;
-  }
-
-  public int getItemPrice() {
-    return itemPrice;
-  }
-
-  public int getDiscountPrice() {
-    return discountPrice;
   }
 }
