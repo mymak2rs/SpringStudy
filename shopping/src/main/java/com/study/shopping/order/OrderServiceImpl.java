@@ -3,7 +3,9 @@ package com.study.shopping.order;
 import com.study.shopping.discount.DiscountPolicy;
 import com.study.shopping.member.Member;
 import com.study.shopping.member.MemberRepository;
+import org.springframework.stereotype.Component;
 
+@Component
 public class OrderServiceImpl implements OrderService {
 
   private final MemberRepository memberRepository;
